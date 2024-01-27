@@ -1,9 +1,15 @@
 import { NavbarProps } from "@/types";
+import clsx from "clsx";
 
 export function Navbar({ menuItems }: NavbarProps) {
 
   return (
-    <div className="">
+    <div className={clsx(
+      'rounded-2xl px-6 py-6 transition-all xl:px-8',
+      useScrollPosition() > 0
+        ? 'xl:bg-white xl:shadow-lg'
+        : 'xl:bg-background'
+    )}>
       <nav className="navbar">
         <div className="navbar__container">
           <div className="navbar__logo">
