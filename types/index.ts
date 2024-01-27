@@ -1,9 +1,8 @@
-export interface LinkProps {
+export interface MenuItem {
   text: string;
   url: string;
 }
 
 export interface NavbarProps {
-  title: string;
-  links: LinkProps[];
+  menuItems?: MenuItem[];
 }
