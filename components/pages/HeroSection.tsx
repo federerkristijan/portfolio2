@@ -1,6 +1,10 @@
-import React from 'react'
+import { HeroSectionPayload } from '@/types';
 
-const HeroSection = () => {
+const HeroSection = ({
+  title,
+  subtitle,
+  image,
+  }: HeroSectionPayload) => {
   return (
     <div>
       <div>

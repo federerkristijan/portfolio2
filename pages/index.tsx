@@ -5,17 +5,17 @@ import { PageProps } from "@/types";
 export default function IndexPage(props: PageProps) {
   const { page } = props;
 
-  const section = {
-    about: page?.aboutSection,
-    contact: page?.contactSection,
-    hero: page?.heroSection,
-    projects: page?.projectsSection,
+  const sections = {
+    about: page?.aboutSection || { title: "", subtitle: "" },
+    contact: page?.contactSection || { title: "", subtitle: "" },
+    hero: page?.heroSection || { title: "", subtitle: "" },
+    projects: page?.projectsSection || { title: "", subtitle: "" },
   };
 
   return (
     <div className=" bg-black text-white">
       <Navbar />
-      <HomePage page={page} section={section} />
+      <HomePage page={page} sections={sections} />
     </div>
   );
 }

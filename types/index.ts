@@ -24,9 +24,9 @@ export interface HomePagePayload {
   projectsSection?: ProjectsSectionPayload;
 }
 
-export default interface HomePageProps {
+export interface HomePageProps {
   page: HomePagePayload;
-  section: Section;
+  sections?: Section;
 }
 
 export interface LayoutProps {
@@ -49,7 +49,7 @@ export interface NavbarProps {
 
 export interface PageProps {
   page: HomePagePayload;
-  section: Section;
+  sections: Section;
 }
 
 export interface Project {
@@ -66,10 +66,10 @@ export interface ProjectsSectionPayload {
 }
 
 export interface Section {
-  about: AboutSectionPayload | undefined;
-  contact: ContactSectionPayload | undefined;
-  hero: HeroSectionPayload | undefined;
-  projects: ProjectsSectionPayload | undefined;
+  about: AboutSectionPayload;
+  contact: ContactSectionPayload;
+  hero: HeroSectionPayload;
+  projects: ProjectsSectionPayload;
 }
 
 export interface Skill {
