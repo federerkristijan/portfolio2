@@ -9,10 +9,12 @@ export function Navbar({ menuItems }: NavbarProps) {
   return (
     <div className="px-6 py-6 transition-all xl:px-8 xl:shadow-lg xl:bg-background border-b border-blue-500 xl:border-none">
       <nav
-        className="Navbar z-0 flex items-center justify-between "
+        className="navbar z-0 flex items-center justify-between "
         aria-label="Global"
       >
-        <Logo setMobileMenuOpen={setMobileMenuOpen} />
+        <div className="border-red-200 ">
+          <Logo setMobileMenuOpen={setMobileMenuOpen} />
+        </div>
         <NavigationItems />
       </nav>
     </div>
