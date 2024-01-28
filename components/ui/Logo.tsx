@@ -13,7 +13,7 @@ const Logo = ({ setMobileMenuOpen }: LogoProps) => {
         className="-m-1.5 -mt-1 p-1.5"
         onClick={() => setMobileMenuOpen(false)}
       >
-        <Image src={logo} alt="logo" width={45} height={45}/>
+        <Image src={logo} alt="logo" width={48} height={48}/>
       </Link>
     </div>
   );

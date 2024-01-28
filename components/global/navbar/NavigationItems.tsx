@@ -19,7 +19,7 @@ const NavigationItems = ({ menuItems}: NavbarProps ) => {
   console.log(navigation, 'look at me')
 
   return (
-    <div className='flex flex-row gap-8 text-2xl'>
+    <div className='flex flex-row gap-24 text-2xl justify-between mx-14'>
       {navigation?.map((item) => (
         <Link
           key={item.name}
