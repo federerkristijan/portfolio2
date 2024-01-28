@@ -1,9 +1,18 @@
-import React from 'react'
+// components/pages/HomePage.tsx
+import React from "react";
+import { HomePageProps } from "@/types";
+import HeroSection from "./HeroSection";
 
-const HomePage = () => {
+export default function HomePage({ sections }: HomePageProps) {
+  const { about, contact, hero, projects } =
+    sections ?? {};
+
   return (
-    <div>HomePage</div>
-  )
+    <div className="bg-[#111111]">
+      <HeroSection
+        title={hero?.title || "Kristijan Federer"}
+        subtitle={hero?.subtitle || "Fullstack Developer"}
+      />
+    </div>
+  );
 }
-
-export default HomePage
