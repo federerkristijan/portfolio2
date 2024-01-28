@@ -1,3 +1,8 @@
+export interface HomePagePayload {
+  title: string;
+  content: string;
+}
+
 export interface LayoutProps {
   children: React.ReactNode;
   menuItems?: MenuItem[];
@@ -8,10 +13,15 @@ export interface LogoProps {
 }
 
 export interface MenuItem {
-  text: string;
+  title: string;
   url: string;
+
 }
 
 export interface NavbarProps {
   menuItems?: MenuItem[];
+}
+
+export interface PageProps {
+  page: HomePagePayload;
 }
