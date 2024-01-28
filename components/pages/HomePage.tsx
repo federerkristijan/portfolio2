@@ -8,7 +8,7 @@ export default function HomePage({ sections }: HomePageProps) {
     sections ?? {};
 
   return (
-    <div className="bg-[#11111111]">
+    <div className="bg-[#111111]">
       <HeroSection
         title={hero?.title || "Kristijan Federer"}
         subtitle={hero?.subtitle || "Fullstack Developer"}
