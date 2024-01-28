@@ -7,13 +7,10 @@ export const metadata: Metadata = {
   description: "Fullstack Software Developer",
 };
 
-export default function RootLayout({
-  children,
-  menuItems
-}: LayoutProps) {
+export default function RootLayout({children}: LayoutProps) {
   return (
     <html lang="en">
-      <body className="bg-black">
+      <body>
         {children}
       </body>
     </html>

@@ -13,7 +13,7 @@ export default function IndexPage(props: PageProps) {
   };
 
   return (
-    <div className=" bg-black text-white">
+    <div className="h-fit">
       <Navbar />
       <HomePage page={page} sections={sections} />
     </div>
