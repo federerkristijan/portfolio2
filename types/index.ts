@@ -24,6 +24,11 @@ export interface HomePagePayload {
   projectsSection?: ProjectsSectionPayload;
 }
 
+export default interface HomePageProps {
+  page: HomePagePayload;
+  section: Section;
+}
+
 export interface LayoutProps {
   children: React.ReactNode;
   menuItems?: MenuItem[];
@@ -44,6 +49,7 @@ export interface NavbarProps {
 
 export interface PageProps {
   page: HomePagePayload;
+  section: Section;
 }
 
 export interface Project {
@@ -57,6 +63,13 @@ export interface ProjectsSectionPayload {
   title: string;
   subtitle: string;
   projects?: Project[];
+}
+
+export interface Section {
+  about: AboutSectionPayload | undefined;
+  contact: ContactSectionPayload | undefined;
+  hero: HeroSectionPayload | undefined;
+  projects: ProjectsSectionPayload | undefined;
 }
 
 export interface Skill {
