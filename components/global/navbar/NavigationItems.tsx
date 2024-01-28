@@ -16,6 +16,8 @@ const NavigationItems = ({ menuItems}: NavbarProps ) => {
     }
   });
 
+  console.log(navigation, 'look at me')
+
   return (
     <div>
       {navigation?.map((item) => (
@@ -23,7 +25,7 @@ const NavigationItems = ({ menuItems}: NavbarProps ) => {
           key={item.name}
           href={item.href}
         >
-          {iconMap[item.name]} 
+          {iconMap[item.name]}
         </Link>
       ))}
     </div>

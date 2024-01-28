@@ -2,8 +2,9 @@ import { NavbarProps } from "@/types";
 import { useState } from "react";
 import Logo from "../../ui/Logo";
 import NavigationItems from "./NavigationItems";
+import { menuItems } from "./menuItems";
 
-export function Navbar({ menuItems }: NavbarProps) {
+export function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
@@ -15,7 +16,7 @@ export function Navbar({ menuItems }: NavbarProps) {
         <div className="border-red-200 ">
           <Logo setMobileMenuOpen={setMobileMenuOpen} />
         </div>
-        <NavigationItems />
+        <NavigationItems menuItems={menuItems}/>
       </nav>
     </div>
   );
