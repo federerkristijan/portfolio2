@@ -13,12 +13,23 @@ const HeroSection = ({ title, subtitle, image }: HeroSectionPayload) => {
     const intervalId = setInterval(() => {
       // Rotate left and right slowly
       setRotation((prevRotation) => (prevRotation >= 0 ? -5 : 5));
-    }, 500); // Set the duration for each half rotation to 0.5 seconds
+    }, 3000); // Set the duration for each half rotation to 2 seconds
 
-    // After 45 seconds, clear the interval to pause the animation
+    // After 10 seconds, clear the interval to pause the animation
     const pauseIntervalId = setInterval(() => {
       clearInterval(intervalId);
-    }, 45000); // Set the pause duration to 45 seconds
+      setTimeout(() => {
+        // Restart the rotation after the pause
+        const newIntervalId = setInterval(() => {
+          setRotation((prevRotation) => (prevRotation >= 0 ? -5 : 5));
+        }, 2000);
+
+        // Clear the interval after 2 seconds to stop the rotation
+        setTimeout(() => {
+          clearInterval(newIntervalId);
+        }, 2000);
+      }, 10000); // Set the pause duration to 10 seconds
+    }, 10000); // Set the initial pause duration to 10 seconds
 
     // Clear the pause interval when the component unmounts
     return () => {
@@ -59,36 +70,12 @@ const HeroSection = ({ title, subtitle, image }: HeroSectionPayload) => {
         <h1>{name3}</h1>
       </div>
     );
-  }; // Add
+  };
 
   return (
     <div className="flex justify-between px-6">
       <div className="p-20 relative">
         <div className="heading-moustache flex-col relative">
-          {/* <motion.div
-            // animate={{
-            //   rotate: rotation,
-            // }}
-            // transition={{
-            //   duration: 0.3, // One complete rotation in 45 seconds
-
-            //   ease: 'linear',
-            //   times: [0, 0.5, 1], // Keyframes for left rotation, default, and right rotation
-            // }}
-
-            animate={{ rotate: [rotation, 0, rotation] }}
-            transition={{
-              from: 60,
-              duration: 0.5,
-              ease: "linear",
-            }}
-          >
-            <Image
-              src={Moustache}
-              alt="animation"
-              className="absolute top-0 left-0 right-0 bottom-0 m-auto w-14 h-auto"
-            />
-          </motion.div> */}
           <h1 className="text-7xl py-4">{headerName()}</h1>
         </div>
         <h2 className="text-5xl py-4">{subtitle}</h2>

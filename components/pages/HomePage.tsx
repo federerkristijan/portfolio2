@@ -2,7 +2,6 @@
 import React from "react";
 import { HomePageProps } from "@/types";
 import HeroSection from "./HeroSection";
-import { HeaderName } from "./data";
 
 export default function HomePage({ sections }: HomePageProps) {
   const { about, contact, hero, projects } =
