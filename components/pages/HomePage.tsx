@@ -2,6 +2,7 @@
 import React from "react";
 import { HomePageProps } from "@/types";
 import HeroSection from "./HeroSection";
+import { HeaderName } from "./data";
 
 export default function HomePage({ sections }: HomePageProps) {
   const { about, contact, hero, projects } =
@@ -10,7 +11,7 @@ export default function HomePage({ sections }: HomePageProps) {
   return (
     <div className="bg-[#111111]">
       <HeroSection
-        title={hero?.title || "Kristijan Federer"}
+        title={hero?.title || ""}
         subtitle={hero?.subtitle || "Fullstack Developer"}
       />
     </div>
