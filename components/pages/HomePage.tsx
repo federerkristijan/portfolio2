@@ -10,7 +10,7 @@ export default function HomePage({ sections }: HomePageProps) {
   return (
     <div className="bg-[#111111]">
       <HeroSection
-        title={hero?.title || "Kristijan Federer"}
+        title={hero?.title || ""}
         subtitle={hero?.subtitle || "Fullstack Developer"}
       />
     </div>
