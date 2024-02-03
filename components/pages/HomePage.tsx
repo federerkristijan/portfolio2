@@ -1,7 +1,7 @@
-// components/pages/HomePage.tsx
 import React from "react";
 import { HomePageProps } from "@/types";
 import HeroSection from "./HeroSection";
+import AboutSection from "./AboutPage";
 
 export default function HomePage({ sections }: HomePageProps) {
   const { about, contact, hero, projects } =
@@ -13,6 +13,12 @@ export default function HomePage({ sections }: HomePageProps) {
         title={hero?.title || ""}
         subtitle={hero?.subtitle || "Fullstack Developer"}
       />
+      {/* <AboutSection
+        title={about?.title || "About"}
+        subtitle={about?.subtitle || ""}
+        image={Image}
+        skills={about?.skills || []}
+      /> */}
     </div>
   );
 }
