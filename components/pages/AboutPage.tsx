@@ -1,9 +1,7 @@
 import { AboutPagePayload } from "@/types";
 import Image from "next/image";
 import Foto from "@/assets/CV Foto Glasses 1 - Edited 1.png";
-import { aboutVars, quote, skills } from "@/utils/variables";
-import { IconType } from "react-icons";
-import { getIconComponent } from "@/utils/functions";
+import { aboutVars, quote } from "@/utils/variables";
 
 export default function AboutPage({ image, skills }: AboutPagePayload) {
   return (
@@ -30,7 +28,9 @@ export default function AboutPage({ image, skills }: AboutPagePayload) {
                 </li>
               ))}
           </ul>
-          <h2 className="text-center pt-16 px-32 leading-loose">{'"' + quote + '"'}</h2>
+          <h2 className="text-center pt-16 px-32 leading-loose">
+            {'"' + quote + '"'}
+          </h2>
         </div>
       </div>
     </div>

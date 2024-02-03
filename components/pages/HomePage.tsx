@@ -1,14 +1,13 @@
 import React from "react";
 import { HomePageProps } from "@/types";
 import HeroSection from "./HeroSection";
-import AboutSection from "./AboutPage";
 
 export default function HomePage({ sections }: HomePageProps) {
-  const { about, contact, hero, projects } =
+  const { hero } =
     sections ?? {};
 
   return (
-    <div className="bg-[#111111]">
+    <div className="bg-[#111111] h-full">
       <HeroSection
         title={hero?.title || ""}
         subtitle={hero?.subtitle || "Fullstack Developer"}

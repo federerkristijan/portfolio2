@@ -57,3 +57,22 @@ export const skills: Skill[] = [
 ];
 
 export const quote = "Failure is an opportunity to learn and thrive."
+
+export const projectsVars = {
+  title: 'Projects',
+  subtitle: 'A collection of projects I have worked on',
+  projects: [
+    {
+      title: 'Livepad',
+      description:
+        'A blog built with Sanity.io, Next.js and TailwindCSS.',
+      url: '',
+    },
+    {
+      title: 'Personal Portfolio',
+      description:
+        'My personal portfolio built with Next.js, TailwindCSS and TypeScript.',
+      url: '',
+    },
+  ],
+};
