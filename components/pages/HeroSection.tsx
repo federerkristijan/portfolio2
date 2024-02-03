@@ -5,6 +5,7 @@ import { Button } from "../ui/Button";
 import Moustache from "@/assets/moustache.png";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const HeroSection = ({ title, subtitle, image }: HeroSectionPayload) => {
   const [rotation, setRotation] = useState(0);
@@ -73,7 +74,7 @@ const HeroSection = ({ title, subtitle, image }: HeroSectionPayload) => {
   };
 
   return (
-    <div className="flex justify-between px-6 w-full">
+    <div className="flex justify-between px-6 w-full min-h-full">
       <div className="p-20 relative">
         <div className="heading-moustache flex-col relative">
           <h1 className="text-7xl py-4">{headerName()}</h1>
@@ -84,18 +85,22 @@ const HeroSection = ({ title, subtitle, image }: HeroSectionPayload) => {
           experience.
         </span>
         <div className="flex gap-8 py-12">
-          <Button
-            className="bg-[#9B51E0] rounded-3xl text-white px-6 py-3 shadow-btn-primary w-full"
-            onClick={() => console.log("/about")}
-          >
-            Discover a talent
-          </Button>
-          <Button
-            className="border-2 border-[#9B51E0] rounded-3xl text-white px-6 py-3 shadow-btn-primary w-full"
-            onClick={() => console.log("/projects")}
-          >
-            See projects
-          </Button>
+          <Link href="/about">
+            <Button
+              className="bg-[#9B51E0] rounded-3xl text-white px-6 py-3 shadow-btn-primary w-full"
+              onClick={() => console.log("/about")}
+            >
+              Discover a talent
+            </Button>
+          </Link>
+          <Link href="/projects">
+            <Button
+              className="border-2 border-[#9B51E0] rounded-3xl text-white px-6 py-3 shadow-btn-primary w-full"
+              onClick={() => console.log("/projects")}
+            >
+              See projects
+            </Button>
+          </Link>
         </div>
       </div>
       <div className="px-10 py-20">

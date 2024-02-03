@@ -25,7 +25,7 @@ export interface HomePagePayload {
   heroSection?: HeroSectionPayload;
   aboutPage?: AboutPagePayload;
   contactPage?: ContactPagePayload;
-  projectsSection?: ProjectsSectionPayload;
+  projectpage?: ProjectsPagePayload;
 }
 
 export interface HomePageProps {
@@ -67,11 +67,18 @@ export interface PageProps {
 export interface Project {
   title: string;
   description: string;
-  image?: typeof Image;
+  image: string;
   url: string;
 }
 
-export interface ProjectsSectionPayload {
+export interface ProjectsPageProps {
+  title: string;
+  subtitle: string;
+  projects: Project[];
+  page: HomePagePayload;
+}
+
+export interface ProjectsPagePayload {
   title: string;
   subtitle: string;
   projects?: Project[];
@@ -81,7 +88,7 @@ export interface Section {
   about: AboutPagePayload;
   contact: ContactPagePayload;
   hero: HeroSectionPayload;
-  projects: ProjectsSectionPayload;
+  projects: ProjectsPagePayload;
 }
 
 export interface Skill {

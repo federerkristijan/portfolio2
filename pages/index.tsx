@@ -1,6 +1,8 @@
 import HomePage from "@/components/pages/HomePage";
 import { Navbar } from "./../components/global/navbar/Navbar";
 import { PageProps } from "@/types";
+import { LayoutGroup } from "framer-motion";
+import Layout from "./layout";
 
 export default function IndexPage(props: PageProps) {
   const { page } = props;
@@ -13,8 +15,10 @@ export default function IndexPage(props: PageProps) {
   };
 
   return (
-    <div className="h-fit">
-      <HomePage page={page} sections={sections} />
-    </div>
+    <>
+      <Layout >
+        <HomePage page={page} sections={sections} />
+      </Layout>
+    </>
   );
 }
