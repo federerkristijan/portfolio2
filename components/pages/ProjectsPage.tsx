@@ -8,25 +8,35 @@ export default function ProjectsPage({ title, subtitle }: ProjectsPagePayload) {
       <h1 className="py-4">{title}</h1>
       <div className="flex">
         {projectsVars && (
-          <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
             {projectsVars.map((project, index) => (
               <div
+                className="flex flex-col gap-4 p-2 rounded-xl shadow-lg w-full h-full bg-slate-300 border-2 border-slate-400 text-black"
                 key={index}
-                className="p-6 rounded-xl shadow-lg"
-                style={{ backgroundImage: `url(${project.image})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
               >
-                <h2 className="text-xl">{project.title}</h2>
-                <p className="pt-4">{project.description}</p>
-                <div className="pt-4">
-                  <a
-                    href={project.url}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="text-blue-400"
-                  >
-                    {project.url}
-                  </a>
-                </div>
+                <h3 className="text-center">{project.title}</h3>
+                <p className="">{project.description}</p>
+                <a
+                  href={project.url}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="py-1 px-2  w-full h-full rounded-xl bg-black "
+                  style={{
+                    backgroundImage: `url(${project.image})`,
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                    backgroundRepeat: "no-repeat",
+                  }}
+                >
+
+                  <Image
+                    src={project.image}
+                    alt="project"
+                    width={450}
+                    height={300}
+                    className="rounded-xl w-[910%] h-[100%]"
+                  />
+                </a>
               </div>
             ))}
           </div>
