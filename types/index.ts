@@ -86,5 +86,4 @@ export interface Section {
 
 export interface Skill {
   title: string;
-  image: IconType;
 }
