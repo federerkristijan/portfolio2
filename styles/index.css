@@ -91,6 +91,10 @@ li {
   letter-spacing: 0.15em;
 }
 
+Homepage {
+  max-height: 100%!important;
+}
+
 .about-pic {
   width: 18rem!important;
   height: 20rem!important;
