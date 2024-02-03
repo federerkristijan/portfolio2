@@ -6,15 +6,14 @@ export default function IndexPage(props: PageProps) {
   const { page } = props;
 
   const sections = {
-    about: page?.aboutSection || { title: "", subtitle: "" },
-    contact: page?.contactSection || { title: "", subtitle: "" },
+    about: page?.aboutPage || { title: "", subtitle: "" },
+    contact: page?.contactPage || { title: "", subtitle: "" },
     hero: page?.heroSection || { title: "", subtitle: "" },
     projects: page?.projectsSection || { title: "", subtitle: "" },
   };
 
   return (
     <div className="h-fit">
-      <Navbar />
       <HomePage page={page} sections={sections} />
     </div>
   );

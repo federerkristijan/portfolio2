@@ -1,11 +1,15 @@
-export interface AboutSectionPayload {
+import { ReactElement } from "react";
+import { IconType } from "react-icons";
+import { StaticImageData } from "next/image";
+
+export interface AboutPagePayload {
   title: string;
   subtitle: string;
-  image?: typeof Image;
+  image?: StaticImageData;
   skills?: Skill[];
 }
 
-export interface ContactSectionPayload {
+export interface ContactPagePayload {
   title: string;
   subtitle: string;
   image?: typeof Image;
@@ -19,14 +23,22 @@ export interface HeroSectionPayload {
 
 export interface HomePagePayload {
   heroSection?: HeroSectionPayload;
-  aboutSection?: AboutSectionPayload;
-  contactSection?: ContactSectionPayload;
+  aboutPage?: AboutPagePayload;
+  contactPage?: ContactPagePayload;
   projectsSection?: ProjectsSectionPayload;
 }
 
 export interface HomePageProps {
   page: HomePagePayload;
   sections?: Section;
+}
+
+export interface AboutPageProps {
+  title: string;
+  description: string;
+  image: ReactElement;
+  skills: never[];
+  page: AboutPagePayload;
 }
 
 export interface LayoutProps {
@@ -66,13 +78,12 @@ export interface ProjectsSectionPayload {
 }
 
 export interface Section {
-  about: AboutSectionPayload;
-  contact: ContactSectionPayload;
+  about: AboutPagePayload;
+  contact: ContactPagePayload;
   hero: HeroSectionPayload;
   projects: ProjectsSectionPayload;
 }
 
 export interface Skill {
   title: string;
-  image?: typeof Image;
 }

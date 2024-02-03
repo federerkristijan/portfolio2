@@ -73,7 +73,7 @@ const HeroSection = ({ title, subtitle, image }: HeroSectionPayload) => {
   };
 
   return (
-    <div className="flex justify-between px-6">
+    <div className="flex justify-between px-6 w-full">
       <div className="p-20 relative">
         <div className="heading-moustache flex-col relative">
           <h1 className="text-7xl py-4">{headerName()}</h1>

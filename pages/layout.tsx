@@ -1,18 +1,17 @@
-import type { Metadata } from "next";
-import "./globals.css";
 import { LayoutProps } from "@/types";
-
-export const metadata: Metadata = {
-  title: "Kristijan Federer",
-  description: "Fullstack Software Developer",
-};
+import { Navbar } from "@/components/global/navbar/Navbar";
+import Head from "next/head";
 
 export default function RootLayout({children}: LayoutProps) {
   return (
+    <>
+
     <html lang="en">
       <body>
+        <Navbar />
         {children}
       </body>
     </html>
+    </>
   );
 }
