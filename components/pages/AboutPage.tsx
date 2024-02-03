@@ -18,7 +18,7 @@ export default function AboutPage({ image, skills }: AboutPagePayload) {
           />
         )}
         <div className="py-3 px-6 max-w-[80%]">
-          <h3>{aboutVars.description}</h3>
+          <h2 className="font-normal">{aboutVars.description}</h2>
           <ul className="skills-wrapper flex h-auto pt-6 gap-4 flex-wrap">
             {skills &&
               skills.map((skill, index) => (
@@ -30,7 +30,7 @@ export default function AboutPage({ image, skills }: AboutPagePayload) {
                 </li>
               ))}
           </ul>
-          <h2 className="text-center pt-12">{'"' + quote + '"'}</h2>
+          <h2 className="text-center pt-16 px-32 leading-loose">{'"' + quote + '"'}</h2>
         </div>
       </div>
     </div>
