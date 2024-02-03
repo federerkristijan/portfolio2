@@ -67,8 +67,15 @@ export interface PageProps {
 export interface Project {
   title: string;
   description: string;
-  image?: typeof Image;
+  image: string;
   url: string;
+}
+
+export interface ProjectsPageProps {
+  title: string;
+  subtitle: string;
+  projects: Project[];
+  page: HomePagePayload;
 }
 
 export interface ProjectsPagePayload {

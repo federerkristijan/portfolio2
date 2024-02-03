@@ -1,5 +1,5 @@
-import { GetStaticProps, NextPage } from 'next';
-import { AboutPagePayload, AboutPageProps } from "@/types";
+import { NextPage } from 'next';
+import { AboutPagePayload } from "@/types";
 import AboutPage from "@/components/pages/AboutPage";
 import Layout from "./layout";
 import {aboutVars, skills} from "@/utils/variables";
