@@ -8,7 +8,7 @@ export function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <div className="px-6 py-2 transition-all xl:px-8 xl:shadow-lg xl:bg-background border-b">
+    <div className="px-6 py-1 transition-all xl:px-8 xl:shadow-lg xl:bg-background border-b">
       <nav
         className="navbar z-0 flex items-center justify-between border-white"
         aria-label="Global"
