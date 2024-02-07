@@ -85,10 +85,7 @@ export interface ProjectsPagePayload {
 }
 
 export interface Section {
-  about: AboutPagePayload;
-  contact: ContactPagePayload;
   hero: HeroSectionPayload;
-  projects: ProjectsPagePayload;
 }
 
 export interface Skill {
