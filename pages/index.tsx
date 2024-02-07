@@ -11,7 +11,7 @@ export default function IndexPage(props: PageProps) {
 
   return (
       <Layout >
-        <HomePage page={page} sections={sections} />
+      <HomePage page={page} sections={sections} />
       </Layout>
   );
 }
