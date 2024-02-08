@@ -104,7 +104,7 @@ const HeroSection = ({ title, subtitle, image }: HeroSectionPayload) => {
         </div>
       </div>
       <div className="px-10 py-20">
-        <Image src={Foto} alt="foto" width={600} height={600} />
+        <Image src={Foto} alt="foto" width={600} height={600} className="rounded-xl" />
       </div>
     </div>
   );

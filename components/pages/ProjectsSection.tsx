@@ -1,14 +1,24 @@
-import { ProjectsPagePayload } from "@/types";
+import { ProjectsSectionPayload } from "@/types";
 import Image from "next/image";
+import Livepad from "@/assets/Livepad.png";
+import Inklusion from "@/assets/Inklusion.png";
+import DasaHink from "@/assets/DasaHink.png";
+import { DiNodejs, DiDigitalOcean, DiDocker, DiGithub, DiMysql } from "react-icons/di";
+import { SiPrisma, SiTailwindcss, SiTypescript, SiVercel } from "react-icons/si";
+import { TbBrandNextjs } from "react-icons/tb";
+import { FaFigma, FaNodeJs } from "react-icons/fa6";
 import { projectsVars } from "@/utils/variables";
 import { IconType } from "react-icons";
-import ProjectsSection from "./ProjectsSection";
 
-export default function ProjectsPage({ title, subtitle }: ProjectsPagePayload) {
-  return (
-    <div className="bg-[#000000] h-full p-10 text-white">
-      <h1 className="py-4">{title}</h1>
-      {/* <div className="flex">
+const ProjectsSection = ({ title, subtitle, image }: ProjectsSectionPayload) => {
+
+
+  const icons = [
+    FaNodeJs, TbBrandNextjs, SiTailwindcss, SiTypescript, DiDigitalOcean, SiVercel, DiDocker, FaFigma, DiGithub, SiPrisma, DiMysql
+  ]
+
+    return (
+     <div className="flex">
         {projectsVars && (
           <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
             {projectsVars.map((project, index) => (
@@ -48,8 +58,8 @@ export default function ProjectsPage({ title, subtitle }: ProjectsPagePayload) {
             ))}
           </div>
         )}
-      </div> */}
-      <ProjectsSection title={title} subtitle={subtitle} icons={[]} />
-    </div>
-  );
-}
+      </div>
+    );
+  };
+
+export default ProjectsSection;
