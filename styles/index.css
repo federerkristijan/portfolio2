@@ -12,9 +12,10 @@ body,
 
 body {
   -webkit-font-smoothing: antialiased;
-  margin: 0;
+  margin-left: 3rem;
+  margin-right: 3rem;
   background-color: black;
-  color: white
+  color: white;
 }
 
 html {

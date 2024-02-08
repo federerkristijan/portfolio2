@@ -69,6 +69,7 @@ export interface Project {
   description: string;
   image: string;
   url: string;
+  icons: IconType[];
 }
 
 export interface ProjectsPageProps {
@@ -84,11 +85,15 @@ export interface ProjectsPagePayload {
   projects?: Project[];
 }
 
+export interface ProjectsSectionPayload {
+  title: string;
+  subtitle: string;
+  image?: typeof Image;
+  icons: IconType[];
+}
+
 export interface Section {
-  about: AboutPagePayload;
-  contact: ContactPagePayload;
   hero: HeroSectionPayload;
-  projects: ProjectsPagePayload;
 }
 
 export interface Skill {

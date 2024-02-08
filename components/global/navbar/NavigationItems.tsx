@@ -19,11 +19,12 @@ const NavigationItems = ({ menuItems}: NavbarProps ) => {
   console.log(navigation, 'look at me')
 
   return (
-    <div className='flex flex-row gap-24 text-2xl justify-between mx-14'>
+    <div className='flex flex-row gap-24 text-2xl justify-between'>
       {navigation?.map((item) => (
         <Link
           key={item.name}
           href={item.href}
+          className='text-white'
         >
           {iconMap[item.name]}
         </Link>

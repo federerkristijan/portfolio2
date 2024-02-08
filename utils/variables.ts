@@ -4,6 +4,10 @@ import { Project, Skill } from "@/types";
 import Livepad from "@/assets/Livepad.png";
 import Inklusion from "@/assets/Inklusion.png";
 import DasaHink from "@/assets/DasaHink.png";
+import { DiNodejs, DiDigitalOcean, DiDocker, DiGithub, DiMysql } from "react-icons/di";
+import { SiPrisma, SiTailwindcss, SiTypescript, SiVercel } from "react-icons/si";
+import { TbBrandNextjs } from "react-icons/tb";
+import { FaFigma, FaNodeJs } from "react-icons/fa6";
 
 export const aboutVars = {
   title: 'About',
@@ -66,13 +70,15 @@ export const projectsTitles = {
   subtitle: 'A collection of projects I have worked on',
 };
 
+//  TODO: Add the project tech stack icons
 export const projectsVars: Project[] = [
   {
     title: 'Livepad',
     description:
-      'A blog built with Sanity.io, Next.js and TailwindCSS.',
+      'Product management for the agile team project. Integration and implemention of the user authentication for the existing website, as well as further developing the app with various Etherpad plugins. Tech stack: Node.js, Next.js, TailwindCSS, i18next, DigitalOcean, Vercel, Docker, Typescript, Sanity.io, Prisma, MySQL, Planetscale, Figma, and GitHub.',
     image: Livepad.src,
     url: 'https://www.livepad.org/',
+    icons: [FaNodeJs, TbBrandNextjs, SiTailwindcss, SiTypescript, DiDigitalOcean, SiVercel, DiDocker, FaFigma, DiGithub, SiPrisma, DiMysql]
   },
   {
     title: 'Inklusion Bühnenreif',
@@ -80,6 +86,7 @@ export const projectsVars: Project[] = [
       'My personal portfolio built with Next.js, TailwindCSS and TypeScript.',
     image: Inklusion.src,
     url: 'https://www.inklusion-buehnenreif.de/',
+    icons: []
   },
   {
     title: 'Dasa Hink',
@@ -87,5 +94,6 @@ export const projectsVars: Project[] = [
       'My personal portfolio built with Next.js, TailwindCSS and TypeScript.',
     image: DasaHink.src,
     url: 'https://www.dasahink.com/',
+    icons: []
   },
 ];

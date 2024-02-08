@@ -4,6 +4,7 @@ import ProjectsPage from "@/components/pages/ProjectsPage";
 import Layout from "./layout";
 import { projectsTitles, projectsVars} from "@/utils/variables";
 import Image from "next/image";
+import { IconType } from 'react-icons';
 
 const Projects: NextPage<ProjectsPagePayload> = ({ title, subtitle, projects }) =>  {
 
@@ -19,16 +20,17 @@ const Projects: NextPage<ProjectsPagePayload> = ({ title, subtitle, projects }) 
 }
 
 
-export const getStaticProps = async () => {
-  const page: ProjectsPagePayload = {
-    title: projectsTitles.title,
-    subtitle: projectsTitles.subtitle,
-    projects: projectsVars || [] ,
-  };
+// export const getStaticProps = async () => {
+//   const page: ProjectsPagePayload = {
+//     title: projectsTitles.title,
+//     subtitle: projectsTitles.subtitle,
+//     projects: projectsVars || [] ,
+//   };
 
-  return {
-    props: page,
-  };
-};
+
+//   return {
+//     props: page,
+//   };
+// };
 
 export default Projects;
